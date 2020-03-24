@@ -23,5 +23,19 @@ namespace LeKebab
 
             return true;
         }
+
+        public bool IsPescetarian()
+        {
+            foreach(var ingredient in _ingredients)
+            {
+                if (ingredient != "tomate" || ingredient != "onion" || ingredient != "poisson"
+                    || ingredient != "crevettes")
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }
